@@ -1,0 +1,24 @@
+name: CI Pipeline
+
+on:
+  workflow_dispatch:
+  # push:
+    branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
+
+jobs:
+  run-tests:
+    strategy:
+      matrix:
+        test_file_name:
+          - src/tests/rest.test.ts
+          - src/tests/graphql.test.ts
+          - src/tests/mutation.test.ts
+          - src/tests/github.test.ts
+          - src/tests/websocket.test.ts
+          - src/tests/wsAutoReconnecting.test.ts
+
+    uses: ./.github/workflows/test-template.yml
+    with:
+      test_file_name: ${{ matrix.test_file_name }}

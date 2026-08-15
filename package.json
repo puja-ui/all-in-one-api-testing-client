@@ -1,0 +1,37 @@
+{
+  "name": "api-client-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "test:ci": "vitest run --reporter=junit --outputFile=test-results.xml",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "restClient": "vitest run src/tests/rest.test.ts",
+    "graphQLClient": "vitest run src/tests/graphql.test.ts",
+    "graphQLClientMutation": "vitest run src/tests/mutation.test.ts",
+    "githubGQL": "vitest run src/tests/github.test.ts",
+    "websocketClient": "vitest run src/tests/websocket.test.ts",
+    "reconnectingWSclient": "vitest run src/tests/wsAutoReconnecting.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.19.0",
+    "dotenv": "^17.4.2",
+    "ts-node": "^10.9.2",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/ws": "^8.18.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/ui": "^4.1.10",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
