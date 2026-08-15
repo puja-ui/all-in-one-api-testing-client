@@ -14,4 +14,9 @@ describe('Github GraphQL Client', () => {
     expect(response).toBeDefined();
     expect(response.login).toBeDefined();
   });
+
+  it('should intentionally fail to demonstrate Qase reporting', () => {
+    // This will definitely fail!
+    expect(true).toBe(false);
+  });
 });
