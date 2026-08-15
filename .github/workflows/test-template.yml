@@ -28,8 +28,8 @@ jobs:
       - name: Run Test File
         env:
           QASE_MODE: testops
-          QASE_PROJECT_CODE: ${{ secrets.QASE_PROJECT_CODE }}
-          QASE_API_TOKEN: ${{ secrets.QASE_API_TOKEN }}
+          QASE_TESTOPS_PROJECT: ${{ secrets.QASE_PROJECT_CODE }}
+          QASE_TESTOPS_API_TOKEN: ${{ secrets.QASE_API_TOKEN }}
         # Runs the specific file passed in as a variable
         run: npx vitest run ${{ inputs.test_file_name }} --reporter=html --reporter=junit --reporter=vitest-qase-reporter --outputFile.junit=test-results.xml
         
