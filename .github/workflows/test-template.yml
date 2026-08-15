@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: '24.x'
           cache: 'npm'
 
       - name: Install Dependencies
@@ -27,11 +27,13 @@ jobs:
 
       - name: Run Test File
         # Runs the specific file passed in as a variable
-        run: npx vitest run ${{ inputs.test_file_name }} --reporter=junit --outputFile=test-results.xml
+        run: npx vitest run ${{ inputs.test_file_name }} --reporter=html --reporter=junit --outputFile.junit=test-results.xml
         
       - name: Upload Test Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-results-${{ github.job }}
-          path: test-results.xml
+          path: |
+            test-results.xml
+            html/

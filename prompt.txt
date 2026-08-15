@@ -1,5 +1,0 @@
-I wnat you to structurise this project create 
-a folder for interfaces, 
-a folder for interceptors. 
-a folder for client and it's methods,
-a folder for calling the functions
