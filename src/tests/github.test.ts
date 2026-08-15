@@ -7,8 +7,7 @@ describe('Github GraphQL Client', () => {
 
   it('should fetch github profile if token exists', async () => {
     if (!process.env.GITHUB_ACCESS_TOKEN) {
-      console.warn('Skipping test: GITHUB_ACCESS_TOKEN is not defined');
-      return;
+      throw new Error('Test failed: GITHUB_ACCESS_TOKEN is not defined in environment variables');
     }
 
     const response = await githubClient.getMyProfile();
