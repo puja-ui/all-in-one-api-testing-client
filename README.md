@@ -1,5 +1,10 @@
 # All-in-One API Testing Framework
 
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vitest](https://img.shields.io/badge/-Vitest-729B1B?style=for-the-badge&logo=vitest&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Qase](https://img.shields.io/badge/Qase-0056D2?style=for-the-badge&logo=qase&logoColor=white)
+
 Automated, multi-protocol testing framework for modern web services.
 
 Tests REST endpoints, GraphQL queries/mutations, and complex WebSocket connections under a single, strongly-typed architecture using TypeScript and Vitest. Integrates natively with Qase.io for test reporting.
