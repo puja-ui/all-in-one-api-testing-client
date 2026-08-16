@@ -10,7 +10,16 @@ Automated, multi-protocol testing framework for modern web services.
 Tests REST endpoints, GraphQL queries/mutations, and complex WebSocket connections under a single, strongly-typed architecture using TypeScript and Vitest. Integrates natively with Qase.io for test reporting.
 
 <!-- Replace the src URL below with the URL of your uploaded screenshot -->
-<img width="100%" alt="Qase Reporting Dashboard" src="https://via.placeholder.com/1200x600?text=Upload+your+Qase+screenshot+to+GitHub+and+paste+URL+here" />
+<table>
+  <tr>
+    <td><img width="1420" height="782" alt="image" src="https://github.com/user-attachments/assets/daf9e6d8-a7f1-45c0-866c-8481d0b9dd5e" /></td>
+    <td><img width="1420" height="782" alt="image" src="https://github.com/user-attachments/assets/1db0d0fa-64a4-4432-b5c1-9933ef69e643" /></td>
+  </tr>
+  <tr>
+    <td><img width="1420" height="782" alt="image" src="https://github.com/user-attachments/assets/addce4bb-ae89-491f-9234-841bf1e5fee8" /></td>
+    <td><img width="1420" height="782" alt="image" src="https://github.com/user-attachments/assets/a1087490-9cbb-4d04-a28e-70a1d0e1af8d" /></td>
+  </tr>
+</table>
 
 ---
 
