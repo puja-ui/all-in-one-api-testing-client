@@ -21,17 +21,14 @@ export class AutoReconnectingWebsocket {
     };
 
     this.newSocket.onmessage = (event) => {
-      if (
-        typeof event.data === 'string' &&
-        event.data.startsWith('Request served')
-      ) {
+      if (typeof event.data === 'string' && event.data.startsWith('Request served')) {
         return;
       }
 
       try {
         const parsedMessage: chatMessage = JSON.parse(event.data.toString());
         console.log(
-          `Received chat message from ${parsedMessage.user}: ${parsedMessage.action} - ${parsedMessage.message}`
+          `Received chat message from ${parsedMessage.user}: ${parsedMessage.action} - ${parsedMessage.message}`,
         );
       } catch (error) {
         console.log(`Received message: ${event.data}`);
@@ -50,7 +47,7 @@ export class AutoReconnectingWebsocket {
         console.log(
           `Unexpected closure, attempting to reconnect in ${
             this.reconnectInterval / 1000
-          } seconds...`
+          } seconds...`,
         );
         setTimeout(() => this.connect(), this.reconnectInterval);
       } else {

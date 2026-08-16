@@ -12,7 +12,7 @@ export const loggingRequestErrorInterceptor = (error: any) => {
 
 export const loggingResponseInterceptor = (response: AxiosResponse) => {
   console.log(
-    `[API Response] ${response.status} from ${response.config.method?.toUpperCase()} to ${response.config.url}`
+    `[API Response] ${response.status} from ${response.config.method?.toUpperCase()} to ${response.config.url}`,
   );
   return response;
 };
@@ -20,7 +20,7 @@ export const loggingResponseInterceptor = (response: AxiosResponse) => {
 export const loggingResponseErrorInterceptor = (error: any) => {
   if (axios.isAxiosError(error)) {
     console.error(
-      `[API response error] ${error.response?.status} from ${error.config?.method?.toUpperCase()} to ${error.config?.url}`
+      `[API response error] ${error.response?.status} from ${error.config?.method?.toUpperCase()} to ${error.config?.url}`,
     );
   } else {
     console.error(`[API response error] ${error}`);

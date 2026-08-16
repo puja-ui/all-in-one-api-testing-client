@@ -6,10 +6,12 @@ describe('Auto Reconnecting Websocket', () => {
     const chatClient = new AutoReconnectingWebsocket();
 
     chatClient.connect();
-    
+
     await new Promise((resolve) => setTimeout(resolve, 2000));
-    
-    expect(() => chatClient.sendMessage({ user: 'Test', action: 'sent', message: 'Hello' })).not.toThrow();
+
+    expect(() =>
+      chatClient.sendMessage({ user: 'Test', action: 'sent', message: 'Hello' }),
+    ).not.toThrow();
 
     chatClient.disconnect();
   });

@@ -21,12 +21,12 @@ export class RestClient {
 
     this.apiClient.interceptors.request.use(
       loggingRequestInterceptor,
-      loggingRequestErrorInterceptor
+      loggingRequestErrorInterceptor,
     );
 
     this.apiClient.interceptors.response.use(
       loggingResponseInterceptor,
-      loggingResponseErrorInterceptor
+      loggingResponseErrorInterceptor,
     );
   }
 

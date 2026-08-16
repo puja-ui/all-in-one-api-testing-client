@@ -27,7 +27,7 @@ export class GithubClient {
 
     if (response.data.errors) {
       throw new Error(
-        `GraphQL error: ${response.data.errors.map((e: any) => e.message).join(', ')}`
+        `GraphQL error: ${response.data.errors.map((e: any) => e.message).join(', ')}`,
       );
     }
 
@@ -35,10 +35,7 @@ export class GithubClient {
   }
 
   public async getMyProfile(): Promise<GithubViewer> {
-    const response = await this.request<{ viewer: GithubViewer }>(
-      GRAPHQL_QUERIES.getMyProfile,
-      {}
-    );
+    const response = await this.request<{ viewer: GithubViewer }>(GRAPHQL_QUERIES.getMyProfile, {});
     return response.viewer;
   }
 }

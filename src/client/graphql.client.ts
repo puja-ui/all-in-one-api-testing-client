@@ -23,17 +23,16 @@ export class GraphQLClient {
 
     if (response.data.errors) {
       throw new Error(
-        `GraphQL error: ${response.data.errors?.map((e: any) => e.message).join(', ')}`
+        `GraphQL error: ${response.data.errors?.map((e: any) => e.message).join(', ')}`,
       );
     }
     return response.data.data;
   }
 
   public async getCountries(countriesCode: String[]): Promise<Country[]> {
-    const response = await this.request<{ countries: Country[] }>(
-      GRAPHQL_QUERIES.getCountries,
-      { codes: countriesCode }
-    );
+    const response = await this.request<{ countries: Country[] }>(GRAPHQL_QUERIES.getCountries, {
+      codes: countriesCode,
+    });
     return response.countries;
   }
 }

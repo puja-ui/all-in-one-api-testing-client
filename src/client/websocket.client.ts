@@ -19,7 +19,7 @@ export class SimpleWebsocketClient {
       try {
         const parsedMessage: chatMessage = JSON.parse(event.data.toString());
         console.log(
-          `Received chat message from ${parsedMessage.user}: ${parsedMessage.action} - ${parsedMessage.message}`
+          `Received chat message from ${parsedMessage.user}: ${parsedMessage.action} - ${parsedMessage.message}`,
         );
       } catch (error) {
         console.log(`Received message: ${event.data}`);

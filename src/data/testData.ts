@@ -1,12 +1,13 @@
-import type { userPayload } from '../interfaces/rest.interface';
-import type { CreatePostInput } from '../interfaces/graphql.interface';
-import type { chatMessage } from '../interfaces/websocket.interface';
+import type { userPayload } from '../interfaces/rest.interface.js';
+import type { CreatePostInput } from '../interfaces/graphql.interface.js';
+import type { chatMessage } from '../interfaces/websocket.interface.js';
+import { faker } from '@faker-js/faker';
 
 export const restTestData = {
   userIdToFetch: 1,
   newUser: {
-    name: 'Joe1',
-    mail: 'joe1@randommail.com',
+    name: faker.person.fullName(),
+    mail: faker.internet.email(),
   } as userPayload,
 };
 
@@ -16,28 +17,28 @@ export const graphqlTestData = {
 
 export const mutationTestData = {
   newPost: {
-    title: 'Hello from the other side',
-    body: 'omfg lol',
+    title: faker.lorem.sentence(),
+    body: faker.lorem.paragraph(),
   } as CreatePostInput,
 };
 
 export const websocketTestData = {
   initialMessage: {
-    user: 'Paul',
+    user: faker.person.firstName(),
     action: 'sent',
-    message: 'ello there mate!',
+    message: faker.lorem.sentence(),
   } as chatMessage,
 };
 
 export const wsAutoReconnectingTestData = {
   initialMessage: {
-    user: 'Paul',
+    user: faker.person.firstName(),
     action: 'sent',
-    message: 'Hello there mate!',
+    message: faker.lorem.sentence(),
   } as chatMessage,
   reconnectMessage: {
-    user: 'Paul',
+    user: faker.person.firstName(),
     action: 'sent',
-    message: 'Hello again after reconnect!',
+    message: faker.lorem.sentence(),
   } as chatMessage,
 };

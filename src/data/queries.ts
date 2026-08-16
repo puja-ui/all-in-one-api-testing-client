@@ -1,5 +1,5 @@
 export const GRAPHQL_QUERIES = {
-    getCountries: `
+  getCountries: `
 query getCountries($codes: [String!]) {
     countries(filter: { code: { in: $codes } }) {
         name
@@ -8,7 +8,7 @@ query getCountries($codes: [String!]) {
     }
 }
 `,
-    getMyProfile: `
+  getMyProfile: `
 query {
     viewer {
         login
@@ -22,7 +22,7 @@ query {
     }
 }
 `,
-    createPost: `
+  createPost: `
 mutation CreatePost($input: CreatePostInput!) {
     createPost(input: $input) {
         id

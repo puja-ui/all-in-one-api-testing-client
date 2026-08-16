@@ -22,7 +22,7 @@ describe('Simple Websocket', () => {
       const originalOnMessage = socket.onmessage;
       socket.onmessage = (event) => {
         if (originalOnMessage) originalOnMessage.call(socket, event);
-        
+
         if (typeof event.data === 'string' && event.data.startsWith('Request served')) {
           return;
         }
@@ -36,7 +36,7 @@ describe('Simple Websocket', () => {
             resolve();
           }
         } catch (e) {
-            // Ignore other messages
+          // Ignore other messages
         }
       };
     });

@@ -23,17 +23,16 @@ export class MutationClient {
 
     if (response.data.errors) {
       throw new Error(
-        `GraphQL error: ${response.data.errors.map((e: any) => e.message).join(', ')}`
+        `GraphQL error: ${response.data.errors.map((e: any) => e.message).join(', ')}`,
       );
     }
     return response.data.data;
   }
 
   public async createPost(input: CreatePostInput): Promise<Post> {
-    const response = await this.request<{ createPost: Post }>(
-      GRAPHQL_QUERIES.createPost,
-      { input }
-    );
+    const response = await this.request<{ createPost: Post }>(GRAPHQL_QUERIES.createPost, {
+      input,
+    });
     return response.createPost;
   }
 }
