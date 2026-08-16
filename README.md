@@ -9,6 +9,9 @@ Automated, multi-protocol testing framework for modern web services.
 
 Tests REST endpoints, GraphQL queries/mutations, and complex WebSocket connections under a single, strongly-typed architecture using TypeScript and Vitest. Integrates natively with Qase.io for test reporting.
 
+<!-- Replace the src URL below with the URL of your uploaded screenshot -->
+<img width="100%" alt="Qase Reporting Dashboard" src="https://via.placeholder.com/1200x600?text=Upload+your+Qase+screenshot+to+GitHub+and+paste+URL+here" />
+
 ---
 
 ## The problem this solves
@@ -190,4 +193,6 @@ Cryptic "Unauthorized" errors caused by a missing `.env` variable waste develope
 
 - Add Git Hooks (Husky) to automatically format and test code before pushing
 - Dockerize the framework for zero-setup execution
+- Add performance and load testing capabilities using K6
+
 - Add performance and load testing capabilities using K6
